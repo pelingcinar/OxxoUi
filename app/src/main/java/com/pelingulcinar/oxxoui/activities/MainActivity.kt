@@ -8,6 +8,7 @@ import androidx.viewpager.widget.ViewPager
 import com.pelingulcinar.oxxoui.R
 import com.pelingulcinar.oxxoui.adapters.MainViewPagerAdapter
 
+
 class MainActivity : AppCompatActivity() {
 
     lateinit var viewPager: ViewPager
@@ -20,11 +21,13 @@ class MainActivity : AppCompatActivity() {
         viewPager = findViewById<ViewPager>(R.id.viewPager_main) as ViewPager
         val adapter = MainViewPagerAdapter(this)
         viewPager.adapter = adapter
-        
+
 
     }
     
 }
+
+
 
 
 

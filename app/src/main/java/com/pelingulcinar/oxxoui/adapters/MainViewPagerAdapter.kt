@@ -20,6 +20,7 @@ class MainViewPagerAdapter(private val context: Context) : PagerAdapter() {
 
     }
 
+
     override fun getCount(): Int {
 
         return images.size
@@ -28,7 +29,7 @@ class MainViewPagerAdapter(private val context: Context) : PagerAdapter() {
     override fun instantiateItem(container: ViewGroup, position: Int): Any {
         layoutInflater = context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
         val v = layoutInflater!!.inflate(R.layout.custom_layout, null)
-        val image = v.findViewById<View>(R.id.imageView) as ImageView
+        val image = v.findViewById<View>(R.id.imageView) as ImageView //bu değil mi
         image.setImageResource(images[position])
 
         val vp = container as ViewPager
