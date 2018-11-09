@@ -64,6 +64,15 @@
                 android:textSize="10sp"
                 android:text="@string/taksit"/>
 
+            <Button
+                android:id="@+id/btnWhite"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@drawable/buttonshape"
+                android:shadowColor="#FFFFFF"
+                android:paddingLeft="50dp"
+                />
+
             <ImageView
                 android:layout_width="300dp"
                 android:layout_height="300dp"
@@ -73,7 +82,8 @@
                 android:layout_height="300dp"
                 android:src="@android:color/holo_green_dark"
                 android:layout_centerHorizontal="true"
-                android:layout_centerVertical="true" />
+                android:layout_centerVertical="true"
+                android:paddingLeft="50dp"/>
             <ImageView
                 android:layout_width="300dp"
                 android:layout_height="300dp"
