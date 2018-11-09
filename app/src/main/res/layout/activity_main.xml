@@ -19,7 +19,50 @@
             <com.pelingulcinar.oxxoui.CustomViewPager
                 android:id="@+id/viewPager_main"
                 android:layout_width="match_parent"
-                android:layout_height="300dp"/>
+                android:layout_height="500dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:id="@+id/txtTitle"
+                android:text="@string/v_yaka_elbise"
+                android:paddingLeft="50dp"
+                android:paddingRight="50dp"
+                android:paddingTop="30dp"
+                android:textColor="@android:color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtDesc"
+                android:paddingLeft="50dp"
+                android:paddingRight="50dp"
+                android:paddingTop="1dp"
+                android:textSize="10sp"
+                android:text="@string/_18_yox_pollysbase"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtCost"
+                android:paddingLeft="50dp"
+                android:paddingRight="50dp"
+                android:paddingTop="3dp"
+                android:text="@string/_129_00_tl"
+                android:textColor="@android:color/black"
+                android:textSize="20sp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtCostDetail"
+                android:paddingLeft="50dp"
+                android:paddingRight="50dp"
+                android:paddingTop="1dp"
+                android:textSize="10sp"
+                android:text="@string/taksit"/>
 
             <ImageView
                 android:layout_width="300dp"
