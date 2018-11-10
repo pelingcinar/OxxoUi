@@ -64,32 +64,85 @@
                 android:textSize="10sp"
                 android:text="@string/taksit"/>
 
-            <Button
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+            <ImageButton
                 android:id="@+id/btnWhite"
+                android:contentDescription="@string/white_button"
                 android:layout_width="20dp"
                 android:layout_height="20dp"
                 android:background="@drawable/buttonshape"
                 android:shadowColor="#FFFFFF"
-                android:paddingLeft="50dp"
-                />
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="30dp"/>
 
-            <ImageView
-                android:layout_width="300dp"
-                android:layout_height="300dp"
-                android:src="@android:color/holo_orange_dark" />
-            <ImageView
-                android:layout_width="300dp"
-                android:layout_height="300dp"
-                android:src="@android:color/holo_green_dark"
-                android:layout_centerHorizontal="true"
-                android:layout_centerVertical="true"
-                android:paddingLeft="50dp"/>
-            <ImageView
-                android:layout_width="300dp"
-                android:layout_height="300dp"
-                android:src="@android:color/holo_blue_bright"
-                android:layout_centerHorizontal="true"
-                android:layout_centerVertical="true" />
+                <ImageButton
+                    android:id="@+id/btnBlack"
+                    android:contentDescription="@string/white_button"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:background="@drawable/buttonshape"
+                    android:layout_marginLeft="15dp"
+                    android:shadowColor="#FFFFFF"
+                    android:paddingLeft="50dp"
+                    android:paddingRight="50dp"
+                    android:layout_marginTop="30dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:fitsSystemWindows="true">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtXS"
+                android:text="@string/xs"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                android:textSize="20sp"
+                android:paddingLeft="50dp"
+                android:layout_marginTop="30dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txtS"
+                    android:text="@string/ss"
+                    android:textSize="20sp"
+                    android:textColor="@android:color/black"
+                    android:textStyle="bold"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginLeft="15dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txtM"
+                    android:text="@string/m"
+                    android:textSize="20sp"
+                    android:textColor="@android:color/black"
+                    android:textStyle="bold"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginLeft="15dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txtL"
+                    android:text="@string/l"
+                    android:textSize="20sp"
+                    android:textColor="@android:color/black"
+                    android:textStyle="bold"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginLeft="15dp" />
+
+            </LinearLayout>
         </LinearLayout>
     </ScrollView>
 </RelativeLayout>

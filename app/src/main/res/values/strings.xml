@@ -7,4 +7,10 @@
     <string name="_18_yox_pollysbase">18 YOX - POLASBISE</string>
     <string name="_129_00_tl">129,00 TL</string>
     <string name="taksit">6x13,32 TLden başlayan taksit seçenekleri</string>
+    <string name="white_button">white button</string>
+    <string name="xs">XS</string>
+    <string name="s">S</string>
+    <string name="ss">S</string>
+    <string name="m">M</string>
+    <string name="l">L</string>
 </resources>
