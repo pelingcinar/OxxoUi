@@ -50,61 +50,82 @@ class MainActivity : AppCompatActivity() {
         })
 
         expandableLayout.addSection(getSection())
-        expandableLayout.addSection(getSection())
-        expandableLayout.addSection(getSection())
-        expandableLayout.addSection(getSection())
-        expandableLayout.addSection(getSection())
-
+        expandableLayout.addSection(getSection1())
+        expandableLayout.addSection(getSection2())
+        expandableLayout.addSection(getSection3())
 
         for(i in 0..3){
             val linearLayout = expandableLayout.getChildAt(i) as LinearLayout
             linearLayout.showDividers = LinearLayout.SHOW_DIVIDER_END
             val drawablee = GradientDrawable()
             drawablee.setColor(Color.GRAY)
-            drawablee.setSize(3,3)
+            drawablee.setSize(4,2)
             linearLayout.dividerPadding = 22
             linearLayout.dividerDrawable = drawablee
         }
-
-
 
         expandableLayout.setExpandListener(object : ExpandCollapseListener.ExpandListener<ItemsDTO>{
             override fun onExpanded(parentIndex: Int, parent: ItemsDTO?, view: View?) {
                 view?.findViewById<ImageView>(R.id.arrow)?.setImageResource(R.drawable.ic_baseline_keyboard_arrow_down_24px)
             }
-
         })
 
         expandableLayout.setCollapseListener(object : ExpandCollapseListener.CollapseListener<ItemsDTO>{
             override fun onCollapsed(parentIndex: Int, parent: ItemsDTO?, view: View?) {
                 view?.findViewById<ImageView>(R.id.arrow)?.setImageResource(R.drawable.ic_baseline_keyboard_arrow_right_24px)
             }
-
         })
     }
 
     fun getSection():Section<ItemsDTO,ItemDescriptionDTO>{
 
         val section = Section<ItemsDTO,ItemDescriptionDTO>()
-        val title = ItemsDTO("Title")
-
+        val title = ItemsDTO("Ürün Bilgisi")
         val desc1 = ItemDescriptionDTO("Desc 1")
-        val desc2 = ItemDescriptionDTO("Desc 2")
-        val desc3 = ItemDescriptionDTO("Desc 3")
-        val desc4 = ItemDescriptionDTO("Desc 4")
-        val desc5 = ItemDescriptionDTO("Desc 5")
 
         section.parent = title
-
         section.children.add(desc1)
-        section.children.add(desc2)
-        section.children.add(desc3)
-        section.children.add(desc4)
-        section.children.add(desc5)
 
+        return section
+    }
+
+    fun getSection1(): Section<ItemsDTO,ItemDescriptionDTO> {
+
+        val section = Section<ItemsDTO,ItemDescriptionDTO>()
+        val title = ItemsDTO("Ürün Açıklaması")
+        val desc1 = ItemDescriptionDTO("Desc 2")
+
+        section.parent = title
+        section.children.add(desc1)
 
         return section
 
+    }
+
+    fun getSection2(): Section<ItemsDTO,ItemDescriptionDTO> {
+
+        val section = Section<ItemsDTO,ItemDescriptionDTO>()
+        val title = ItemsDTO("İade ve Değişim")
+        val desc2 = ItemDescriptionDTO("Desc 3")
+
+        section.parent = title
+        section.children.add(desc2)
+
+        return section
+
+    }
+
+    fun getSection3(): Section<ItemsDTO,ItemDescriptionDTO> {
+
+        val section = Section<ItemsDTO,ItemDescriptionDTO>()
+        val title = ItemsDTO("Beden Tablosu")
+
+        val desc3 = ItemDescriptionDTO("Desc 4")
+
+        section.parent = title
+        section.children.add(desc3)
+
+        return section
 
     }
 }

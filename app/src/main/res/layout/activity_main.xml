@@ -149,7 +149,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 app:parentLayout="@layout/layout_parent"
-                app:childLayout="@layout/layout_child"/>
+                app:childLayout="@layout/layout_child"
+                android:layout_marginTop="30dp"/>
         </LinearLayout>
     </ScrollView>
 </RelativeLayout>
