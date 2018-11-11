@@ -11,18 +11,23 @@ import android.widget.TextView
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import androidx.viewpager.widget.ViewPager
+import com.pelingulcinar.oxxoui.CustomGridView
 import com.pelingulcinar.oxxoui.R
+import com.pelingulcinar.oxxoui.adapters.MainGridViewAdapter
 import com.pelingulcinar.oxxoui.adapters.MainViewPagerAdapter
 import com.pelingulcinar.oxxoui.model.ItemDescriptionDTO
 import com.pelingulcinar.oxxoui.model.ItemsDTO
 import iammert.com.expandablelib.ExpandCollapseListener
 import iammert.com.expandablelib.ExpandableLayout
 import iammert.com.expandablelib.Section
+import kotlinx.android.synthetic.main.activity_main.*
 
 
 class MainActivity : AppCompatActivity() {
 
     lateinit var viewPager: ViewPager
+    var gridViewAdapter : MainGridViewAdapter? = null
+    var kombinList = ArrayList<CustomGridView>()
 
     @RequiresApi(Build.VERSION_CODES.LOLLIPOP)
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -32,6 +37,16 @@ class MainActivity : AppCompatActivity() {
         viewPager = findViewById<ViewPager>(R.id.viewPager_main) as ViewPager
         val adapter = MainViewPagerAdapter(this)
         viewPager.adapter = adapter
+
+        kombinList.add(CustomGridView(R.drawable.siyahcanta,"Bağlama Çanta","53,00TL"))
+        kombinList.add(CustomGridView(R.drawable.boncukluayakkabi,"Boncuk Detaylı Ayakkabı","48,00TL"))
+        kombinList.add(CustomGridView(R.drawable.siyahcantao,"Bağlama Çanta","53,00TL"))
+        kombinList.add(CustomGridView(R.drawable.ayakkabi,"Boncuk Detaylı Ayakkabı","48,00TL"))
+
+        gridViewAdapter = MainGridViewAdapter(this, kombinList)
+
+        gridView.adapter = gridViewAdapter
+
 
         val expandableLayout = findViewById<ExpandableLayout>(R.id.el)
         expandableLayout.setRenderer(object : ExpandableLayout.Renderer<ItemsDTO, ItemDescriptionDTO>{
