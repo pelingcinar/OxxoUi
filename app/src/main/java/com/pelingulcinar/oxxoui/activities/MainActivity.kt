@@ -12,6 +12,7 @@ import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import androidx.viewpager.widget.ViewPager
 import com.pelingulcinar.oxxoui.CustomGridView
+import com.pelingulcinar.oxxoui.ExpandableHeightGridView
 import com.pelingulcinar.oxxoui.R
 import com.pelingulcinar.oxxoui.adapters.MainGridViewAdapter
 import com.pelingulcinar.oxxoui.adapters.MainViewPagerAdapter
@@ -44,8 +45,11 @@ class MainActivity : AppCompatActivity() {
         kombinList.add(CustomGridView(R.drawable.ayakkabi,"Boncuk Detaylı Ayakkabı","48,00TL"))
 
         gridViewAdapter = MainGridViewAdapter(this, kombinList)
-
         gridView.adapter = gridViewAdapter
+
+        val mgridView  = findViewById<ExpandableHeightGridView>(R.id.gridView)
+        mgridView.setAdapter(gridViewAdapter)
+        mgridView.isExpanded = true
 
 
         val expandableLayout = findViewById<ExpandableLayout>(R.id.el)

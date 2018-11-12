@@ -163,7 +163,7 @@
                 android:textColor="@android:color/black"
                 android:textSize="20sp"/>
 
-            <GridView
+            <com.pelingulcinar.oxxoui.ExpandableHeightGridView
                 android:layout_width="match_parent"
                 android:layout_height="300dp"
                 android:id="@+id/gridView"
@@ -171,9 +171,10 @@
                 android:horizontalSpacing="15dp"
                 android:numColumns="auto_fit"
                 android:verticalSpacing="1dp"
-                android:paddingTop="5dp">
+                android:paddingTop="5dp"
+                android:isScrollContainer="false">
 
-            </GridView>
+            </com.pelingulcinar.oxxoui.ExpandableHeightGridView>
 
         </LinearLayout>
     </ScrollView>
