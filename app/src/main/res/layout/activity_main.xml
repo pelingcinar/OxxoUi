@@ -104,9 +104,10 @@
                 android:id="@+id/txtXS"
                 android:text="@string/xs"
                 android:textStyle="bold"
-                android:textColor="@android:color/black"
                 android:textSize="20sp"
-                android:paddingLeft="50dp"
+                android:layout_marginLeft="50dp"
+                android:clickable="true"
+                android:focusable="true"
                 android:layout_marginTop="30dp"/>
 
                 <TextView

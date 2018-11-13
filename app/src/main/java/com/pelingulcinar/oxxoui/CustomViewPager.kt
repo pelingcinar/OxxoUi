@@ -6,25 +6,13 @@ import android.view.MotionEvent
 import androidx.viewpager.widget.ViewPager
 
 
-class CustomViewPager : ViewPager {
+class CustomViewPager @JvmOverloads constructor(context: Context, attrs: AttributeSet? = null) : ViewPager(context, attrs) {
 
     private var isPagingEnabled = true
 
-    constructor(context: Context) : super(context) {}
+    override fun onTouchEvent(event: MotionEvent): Boolean = this.isPagingEnabled && super.onTouchEvent(event)
 
-    constructor(context: Context, attrs: AttributeSet) : super(context, attrs) {}
+    override fun onInterceptTouchEvent(event: MotionEvent): Boolean = this.isPagingEnabled && super.onInterceptTouchEvent(event)
 
-    override fun onTouchEvent(event: MotionEvent): Boolean {
-        return this.isPagingEnabled && super.onTouchEvent(event)
-    }
-
-    override fun onInterceptTouchEvent(event: MotionEvent): Boolean {
-        return this.isPagingEnabled && super.onInterceptTouchEvent(event)
-    }
-
-    fun setPagingEnabled(b: Boolean) {
-        this.isPagingEnabled = b
-    }
+    fun setPagingEnabled(b: Boolean) = with(this) { isPagingEnabled = b }
 }
-
-//arrrayin nerede data :D gerek yok diye düşündüm???? peki viewpager neyi basıyor suan
