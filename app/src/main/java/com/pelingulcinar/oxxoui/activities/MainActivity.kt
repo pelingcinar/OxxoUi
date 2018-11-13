@@ -6,12 +6,16 @@ import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.pelingulcinar.oxxoui.CustomGridView
 import com.pelingulcinar.oxxoui.R
 import com.pelingulcinar.oxxoui.adapters.MainGridViewAdapter
+import com.pelingulcinar.oxxoui.adapters.MainRecyclerViewAdapter
 import com.pelingulcinar.oxxoui.adapters.MainViewPagerAdapter
 import com.pelingulcinar.oxxoui.model.ItemDescriptionDTO
 import com.pelingulcinar.oxxoui.model.ItemsDTO
+import com.pelingulcinar.oxxoui.model.RvListDTO
 import iammert.com.expandablelib.ExpandCollapseListener
 import iammert.com.expandablelib.ExpandableLayout
 import iammert.com.expandablelib.Section
@@ -23,6 +27,7 @@ class MainActivity : AppCompatActivity() {
     val mainViewPagerAdapter by lazy { MainViewPagerAdapter(this) }
     val kombinList by lazy { ArrayList<CustomGridView>() }
     val gridViewAdapter by lazy { MainGridViewAdapter(this, kombinList) }
+    val rvList by lazy { ArrayList<String>()}
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -95,6 +100,21 @@ class MainActivity : AppCompatActivity() {
 
             checkStateTextImage(it as TextView)
         }
+
+        val recyclerView = findViewById<RecyclerView>(R.id.recyclerView)
+
+        recyclerView.layoutManager = LinearLayoutManager(this,RecyclerView.HORIZONTAL,false)
+
+        val feed = ArrayList<RvListDTO>()
+
+        feed.add(RvListDTO("Askılı Bağlamalı Çanta","53,00TL", R.drawable.ayakkabi))
+        feed.add(RvListDTO("Boncuk Detaylı ayakkabı","48,00TL", R.drawable.ayakkabi))
+        feed.add(RvListDTO("Askılı Bağlamalı Çanta","53,00TL", R.drawable.ayakkabi))
+        feed.add(RvListDTO("Boncuk Detaylı ayakkabı","48,00TL", R.drawable.ayakkabi))
+
+
+        val adapter = MainRecyclerViewAdapter(feed)
+        recyclerView.adapter = adapter
     }
 
     private fun checkStateTextImage(textView : TextView){

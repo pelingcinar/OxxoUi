@@ -159,7 +159,8 @@
                 android:id="@+id/txtKombin"
                 android:paddingLeft="50dp"
                 android:paddingRight="50dp"
-                android:paddingTop="5dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="20dp"
                 android:text="@string/kombini_tamamla"
                 android:textColor="@android:color/black"
                 android:textSize="20sp"/>
@@ -176,6 +177,27 @@
                 android:isScrollContainer="false">
 
             </com.pelingulcinar.oxxoui.ExpandableHeightGridView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtSonGezdiklerin"
+                android:paddingLeft="50dp"
+                android:paddingRight="50dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="5dp"
+                android:text="@string/son_gezdiklerin"
+                android:textColor="@android:color/black"
+                android:textSize="20sp"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/recyclerView"
+                android:paddingTop="5dp"
+                android:orientation="horizontal">
+
+            </androidx.recyclerview.widget.RecyclerView>
 
         </LinearLayout>
     </ScrollView>
