@@ -15,4 +15,8 @@
     <string name="l">L</string>
     <string name="kombini_tamamla">Kombini Tamamla</string>
     <string name="son_gezdiklerin">Son Gezdiklerin</string>
+    <string name="al_veri_ini_500_tl_ye_tamamla_50_tl_kazan">Alışverişini 500 TL ye tamamla 50 TL kazan</string>
+    <string name="_90_g_n_de_i_im_ve_iade">90 gün değişim ve iade</string>
+    <string name="_7_24_g_venli_al_veri">7/24 güvenli alışveriş</string>
+    <string name="taksit_se_enekleri">Taksit seçenekleri</string>
 </resources>

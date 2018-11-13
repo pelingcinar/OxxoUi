@@ -185,7 +185,6 @@
                 android:paddingLeft="50dp"
                 android:paddingRight="50dp"
                 android:paddingTop="10dp"
-                android:paddingBottom="5dp"
                 android:text="@string/son_gezdiklerin"
                 android:textColor="@android:color/black"
                 android:textSize="20sp"/>
@@ -194,10 +193,153 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/recyclerView"
-                android:paddingTop="5dp"
+                android:layout_marginTop="10dp"
                 android:orientation="horizontal">
-
             </androidx.recyclerview.widget.RecyclerView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="280dp"
+                android:background="#efefef"
+                android:layout_marginTop="24dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:layout_marginBottom="24dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_marginTop="24dp"
+                        android:layout_marginLeft="24dp"
+                        android:src="@drawable/giftb">
+                    </ImageView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="24dp"
+                        android:layout_marginLeft="8dp"
+                        android:id="@+id/gift"
+                        android:text="@string/al_veri_ini_500_tl_ye_tamamla_50_tl_kazan"
+                        android:textSize="10sp"
+                        android:scaleType="fitXY"
+                        android:textColor="@android:color/black"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:id="@+id/replay">
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_marginTop="24dp"
+                        android:layout_marginLeft="24dp"
+                        android:src="@drawable/replay">
+                    </ImageView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="24dp"
+                        android:layout_marginLeft="8dp"
+                        android:id="@+id/cycler"
+                        android:text="@string/_90_g_n_de_i_im_ve_iade"
+                        android:textSize="10sp"
+                        android:scaleType="fitXY"
+                        android:textColor="@android:color/black"
+                        android:layout_below="@+id/replay"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_marginTop="24dp"
+                        android:layout_marginLeft="24dp"
+                        android:src="@drawable/shield">
+                    </ImageView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="24dp"
+                        android:layout_marginLeft="8dp"
+                        android:id="@+id/security"
+                        android:text="@string/_7_24_g_venli_al_veri"
+                        android:textSize="10sp"
+                        android:scaleType="fitXY"
+                        android:textColor="@android:color/black"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_marginTop="24dp"
+                        android:layout_marginLeft="24dp"
+                        android:src="@drawable/dollar">
+                    </ImageView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="24dp"
+                        android:layout_marginLeft="8dp"
+                        android:id="@+id/taksit"
+                        android:text="@string/taksit_se_enekleri"
+                        android:textSize="10sp"
+                        android:scaleType="fitXY"
+                        android:textColor="@android:color/black"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_marginTop="24dp"
+                        android:layout_marginLeft="24dp"
+                        android:src="@drawable/shipped">
+                    </ImageView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="24dp"
+                        android:layout_marginLeft="8dp"
+                        android:id="@+id/bus"
+                        android:text="100 TL ve üzeri alışverişlerde ücretsiz kargo"
+                        android:textSize="10sp"
+                        android:scaleType="fitXY"
+                        android:textColor="@android:color/black"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
 
         </LinearLayout>
     </ScrollView>
