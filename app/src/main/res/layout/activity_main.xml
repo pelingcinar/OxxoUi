@@ -22,6 +22,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="500dp" />
 
+            <me.relex.circleindicator.CircleIndicator
+                android:id="@+id/indicator"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                app:ci_drawable="@drawable/circleindicator_round"/>
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
@@ -311,7 +317,6 @@
                         android:textSize="10sp"
                         android:scaleType="fitXY"
                         android:textColor="@android:color/black"/>
-
                 </LinearLayout>
 
                 <LinearLayout
@@ -339,7 +344,6 @@
                         android:textColor="@android:color/black"/>
 
                 </LinearLayout>
-
             </LinearLayout>
         </LinearLayout>
     </ScrollView>
@@ -376,7 +380,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:orientation="horizontal"
         android:background="@android:color/white"
         android:layout_alignParentBottom="true">
@@ -396,8 +400,8 @@
             android:layout_height="25dp"
             android:src="@drawable/like"
             android:layout_marginLeft="16dp"
-            android:layout_marginTop="10dp"/>
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="1dp"/>
     </LinearLayout>
-
 </RelativeLayout>
 

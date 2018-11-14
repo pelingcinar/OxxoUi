@@ -20,6 +20,7 @@ import iammert.com.expandablelib.ExpandCollapseListener
 import iammert.com.expandablelib.ExpandableLayout
 import iammert.com.expandablelib.Section
 import kotlinx.android.synthetic.main.activity_main.*
+import me.relex.circleindicator.CircleIndicator
 
 
 class MainActivity : AppCompatActivity() {
@@ -34,6 +35,8 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         viewPager_main.adapter = mainViewPagerAdapter
+        val indicator = findViewById<CircleIndicator>(R.id.indicator)
+        indicator.setViewPager(viewPager_main)
 
         kombinList.add(CustomGridView(R.drawable.siyahcanta, "Bağlama Çanta", "53,00TL"))
         kombinList.add(CustomGridView(R.drawable.boncukluayakkabi, "Boncuk Detaylı Ayakkabı", "48,00TL"))
@@ -108,9 +111,9 @@ class MainActivity : AppCompatActivity() {
         val feed = ArrayList<RvListDTO>()
 
         feed.add(RvListDTO("Askılı Bağlamalı Çanta","53,00TL", R.drawable.ayakkabi))
-        feed.add(RvListDTO("Boncuk Detaylı ayakkabı","48,00TL", R.drawable.ayakkabi))
-        feed.add(RvListDTO("Askılı Bağlamalı Çanta","53,00TL", R.drawable.ayakkabi))
-        feed.add(RvListDTO("Boncuk Detaylı ayakkabı","48,00TL", R.drawable.ayakkabi))
+        feed.add(RvListDTO("Boncuk Detaylı Ayakkabı","48,00TL", R.drawable.siyahcantao))
+        feed.add(RvListDTO("Askılı Bağlamalı Çanta","53,00TL", R.drawable.boncukluayakkabi))
+        feed.add(RvListDTO("Boncuk Detaylı Ayakkabı","48,00TL", R.drawable.ayakkabi))
 
 
         val adapter = MainRecyclerViewAdapter(feed)
